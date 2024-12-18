@@ -2,9 +2,12 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,100..900&family=Kumbh+Sans:wght@100..900&display=swap");
 @import "./reset";
-@import "./variables";
-@import "./mixins";
+@import "./base/variables";
+@import "./base/mixins";
 @import "./common";
+
+@import "./header";
+@import "./base/menu";
 
 body {
    font-family: "Inter", sans-serif;
@@ -14,8 +17,8 @@ body {
 }
 
 svg {
-   width: toEm(24, 18);
-   height: toEm(24, 18);
+   @include fluid-property("width", 24, 20);
+   @include fluid-property("height", 24, 20);
    color: var(--clr-yellow);
    transition: rotate 0.3s;
 }
