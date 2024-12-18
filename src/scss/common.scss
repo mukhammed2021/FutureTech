@@ -14,3 +14,21 @@
       }
    }
 }
+
+.new {
+   display: inline-block;
+   @include fluid-property("font-size", 16, 12);
+   padding: toEm(4) toEm(12);
+   border-radius: toEm(6);
+   background-color: var(--clr-dark-10);
+   position: relative;
+   &::before,
+   &::after {
+      content: "";
+      position: absolute;
+      inset: -0.6px;
+      z-index: -1;
+      background: linear-gradient(40deg, rgba(38, 38, 38, 1) 40%, rgba(255, 209, 25, 0.2) 100%);
+      border-radius: inherit;
+   }
+}
