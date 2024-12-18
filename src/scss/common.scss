@@ -1,0 +1,16 @@
+.button {
+   @include flex-center(true);
+   gap: toEm(10);
+   @include fluid-property("font-size", 18, 14);
+   padding: 1em 1.3333333333em;
+   border-radius: 0.666667em;
+   background-color: var(--clr-dark-08);
+   border: toRem(1) solid var(--clr-dark-15);
+   @media (any-hover: hover) {
+      &:hover {
+         svg {
+            rotate: 45deg;
+         }
+      }
+   }
+}
